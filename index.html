@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8fc">
+  <title>Little Jar ✦ A tiny place for little messages</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true">✦　·　✧　·　✦　·　✧</div>
+
+  <header class="topbar">
+    <a href="#" class="brand">little jar <span>✦</span></a>
+    <span class="top-note">a little corner of happiness ♡</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">A TINY PLACE FOR LITTLE MESSAGES</p>
+      <h1>Some words deserve<br>to be kept <span>forever.</span></h1>
+      <p class="subtitle">
+        Send a little star, leave a little love.<br>
+        Every star holds a message just for you.
+      </p>
+
+      <div class="jar-scene">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span class="deco deco-one">✧</span>
+        <span class="deco deco-two">♡</span>
+        <span class="deco deco-three">✦</span>
+        <div class="jar" aria-label="A magical jar filled with stars">
+          <div class="jar-neck"></div>
+          <div class="jar-lid"></div>
+          <div class="jar-glass">
+            <div id="starField" class="star-field"></div>
+            <div class="jar-shine"></div>
+            <div class="jar-label">little<br><span>moments</span></div>
+          </div>
+        </div>
+        <p class="jar-caption" id="starCount">a little jar full of love ♡</p>
+      </div>
+
+      <div class="actions">
+        <button class="primary-btn" id="openJarBtn">Open a star ✦</button>
+        <button class="secondary-btn" id="sendStarBtn">Send a star ♡</button>
+      </div>
+      <p class="tiny-note">made with a little bit of magic and a lot of love</p>
+    </section>
+
+    <section class="how">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>Little stars, little feelings.</h2>
+      <div class="steps">
+        <article class="step">
+          <span>✉️</span>
+          <h3>Write a message</h3>
+          <p>Put a little thought or a kind word into a star.</p>
+        </article>
+        <article class="step">
+          <span>⭐</span>
+          <h3>Send your star</h3>
+          <p>Choose a color and send a tiny piece of happiness.</p>
+        </article>
+        <article class="step">
+          <span>💌</span>
+          <h3>Open with love</h3>
+          <p>Pick a star and discover the message inside.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>somewhere between a wish and a memory ✧</p>
+  </footer>
+
+  <dialog id="sendDialog" class="dialog">
+    <form id="sendForm">
+      <button type="button" class="close-btn" data-close="sendDialog" aria-label="Close">×</button>
+      <p class="eyebrow">LEAVE A LITTLE LOVE</p>
+      <h2>Send a star ♡</h2>
+
+      <label for="sender">Your name <span>(optional)</span></label>
+      <input id="sender" name="sender" maxlength="60" placeholder="Someone who cares">
+
+      <label for="message">Your little message</label>
+      <textarea id="message" name="message" maxlength="500" required placeholder="A little reminder that someone is rooting for you..."></textarea>
+
+      <label for="starColor">Choose your star</label>
+      <select id="starColor" name="starColor">
+        <option value="gold">Golden sunshine ✦</option>
+        <option value="pink">Pink love ♡</option>
+        <option value="blue">Blue dreams ✧</option>
+        <option value="purple">Lavender wishes ✨</option>
+      </select>
+
+      <button class="primary-btn full-btn" type="submit">Send a little star ✦</button>
+      <p class="form-note">This is a preview. Messages are not saved online yet.</p>
+    </form>
+  </dialog>
+
+  <dialog id="messageDialog" class="dialog message-dialog">
+    <div class="message-card">
+      <button type="button" class="close-btn" data-close="messageDialog" aria-label="Close">×</button>
+      <div id="messageStar" class="message-star">✦</div>
+      <p class="eyebrow">A LITTLE MESSAGE FOR YOU</p>
+      <h2 id="messageTitle">Someone special</h2>
+      <p id="messageBody" class="message-body"></p>
+      <p class="message-footer">you are loved, always ♡</p>
+      <button class="secondary-btn full-btn" data-close="messageDialog">Keep this feeling ♡</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
